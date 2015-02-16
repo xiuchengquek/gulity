@@ -74,10 +74,10 @@ kmeanValidation <- R6Class('kmeanValidator',
                             private=list(
                               rand_k = function(x){
                                   results <- list()
-                                  for(i in 1:x){
-                                     rand_df <- matrix(sample(self$df),
+                                  rand_df <- matrix(sample(self$df),
                                                   dim(self$df)[1],
                                                   dim(self$df)[2])
+                                  for(i in 1:x){
                                      results[[i]] <- sum(kmeans(rand_df,
                                        i, self$itermax)$withinss)
 
