@@ -82,6 +82,7 @@ kmeanValidation <- R6Class('kmeanValidator',
                                        i, self$itermax)$withinss)
 
                                  }
+                                 print(results)
                                  results
                                 }
                               )

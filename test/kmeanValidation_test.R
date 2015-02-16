@@ -15,7 +15,7 @@ test_kv_initialize =  function(){
 
 
 test_kv_methods = function(){
-  kv_melt <- kv$gen_rand(4)
-  checkEquals(800,nrow(kv_melt))
+  kv_melt <- kv$gen_rand(10)
+  checkEquals(500,nrow(kv_melt))
   #checkTrue(class(kv_melt) == 'data.frame', "check if kv$assest return dataframe")
 }
