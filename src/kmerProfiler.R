@@ -24,8 +24,16 @@ kmeanProfiler <- R6Class('kmeanProfile',
                           output[[y]] <- self$k_child(x, y);
                         }
                         output
-                      }
-                      ,
+                      },
+                      scree_data = function(x){
+
+                          results <- list()
+                          for (i in 1:x){
+                            results[[i]]<- sum(self$k_extract(i)$withinss)
+                          }
+                          melt(results)
+
+                      },
                       assest_k = function(x){
                         require(ggplot2)
                         require(reshape)

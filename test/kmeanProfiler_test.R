@@ -19,4 +19,5 @@ test_initilization_itermax =  function(){
 test_kmeanProfiler_methods = function(){
   checkEquals(length(mt_kmeans$size), length(kp$k_extract(4)$size));
   checkEquals(4, length(kp$k_children(4)))
+  checkEquals(4, nrow(kp$scree_data(4)))
 }
